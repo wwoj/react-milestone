@@ -36,3 +36,81 @@
     transform: rotate(360deg);
   }
 }
+
+li {
+  display: inline;
+}
+nav {
+  display:flex;
+  justify-content: flex-end;
+}
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+.active {
+  background-color: #1e90ff;
+}
+body{
+margin: 8px;
+}
+
+.containerPage
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: rgba(10,10,10,.1);
+  padding: 10%;
+}
+
+#sentenceParagraf{
+  /* text-shadow: 2px 2px 4px #000000; */
+
+  text-shadow:  0 15px 5px rgba(0,0,0,.3), 10px 20px 5px rgba(0,0,0,.05), -10px 20px 5px rgba(0,0,0,.05);text-shadow: rgba(10,10,10,.1) 0 15px 5px; 
+  font-size: 2rem;
+  font-weight: 400;
+  width: 60%;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+img{
+  width: 30%;
+}
+
+.contact-container
+{
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+}
+.form-container
+{
+  background: #f9f9f9;
+  /* padding: 25px; */
+  margin-top: 150px ;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.24);
+}
+form{
+ 
+}
+ input{
+   margin-top: 10px;
+ }
+ .text-form{
+  width: 90%;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 14px;
+ }
+.button-form
+{
+  margin-top:10px;
+  align-self: flex-end;
+ 
+  
+}
