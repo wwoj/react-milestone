@@ -82,6 +82,7 @@ export default class Form extends Component {
             name="text-info"
             className="input-field"
             onChange={this.updateText}
+            title="Hooray!"
           />
           <button type="button"className="button-submit" onClick={this.submitClick}>
             Submit

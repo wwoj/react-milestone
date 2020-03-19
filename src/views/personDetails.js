@@ -1,5 +1,4 @@
-import React, { Component, } from "react";
-import { Redirect } from 'react-router-dom'
+import React, { Component } from "react";
 import Pobrane, { searchElement } from "../services/peopleSession";
 export default class PersonDetails extends Component {
   constructor(props) {
@@ -25,7 +24,7 @@ export default class PersonDetails extends Component {
       id: person.id,
       position: person.position,
       gender: person.gender,
-      hasError: false 
+      hasError: false
     });
   };
 
@@ -50,7 +49,6 @@ export default class PersonDetails extends Component {
       position: person.position,
       gender: person.gender
     });
-    
   }
   updateRate = person => {
     this.setState({ firstName: person.firstName });
@@ -61,46 +59,44 @@ export default class PersonDetails extends Component {
       return <h1>Something went wrong.</h1>;
     }
 
-      return (
-        <div className="card">
-          <div className="card-div-picture">
-            <img
-              src={this.state.picture}
-              alt={"picture_of__" + this.state.firstName}
-              className="card-img"
-            />
-          </div>
-          <div>
-            <span>Position </span>
-            <strong className="upper-case">{this.state.position}</strong>
-          </div>
-          <div>
-            <span>Name </span>
-            <strong className="upper-case">{this.state.firstName}</strong>
-          </div>
-          <div>
-            <span>Surname </span>
-            <strong className="upper-case">{this.state.lastName}</strong>
-          </div>
-          <div>
-            <span>Gender</span>{" "}
-            <strong className="upper-case">{this.state.gender}</strong>
-          </div>
-          <div>
-            <span>ID </span>
-            <strong>{this.state.id}</strong>
-          </div>
-          <div>
-            <span>Phone </span>
-            <strong>{this.state.mobile}</strong>
-          </div>
-          <div>
-            <span> Email: </span>
-            <strong>{this.state.email}</strong>
-          </div>
+    return (
+      <div className="card">
+        <div className="card-div-picture">
+          <img
+            src={this.state.picture}
+            alt={"picture_of__" + this.state.firstName}
+            className="card-img"
+          />
         </div>
-      );
-   
-    
+        <div>
+          <span>Position </span>
+          <strong className="upper-case">{this.state.position}</strong>
+        </div>
+        <div>
+          <span>Name </span>
+          <strong className="upper-case">{this.state.firstName}</strong>
+        </div>
+        <div>
+          <span>Surname </span>
+          <strong className="upper-case">{this.state.lastName}</strong>
+        </div>
+        <div>
+          <span>Gender</span>{" "}
+          <strong className="upper-case">{this.state.gender}</strong>
+        </div>
+        <div>
+          <span>ID </span>
+          <strong>{this.state.id}</strong>
+        </div>
+        <div>
+          <span>Phone </span>
+          <strong>{this.state.mobile}</strong>
+        </div>
+        <div>
+          <span> Email: </span>
+          <strong>{this.state.email}</strong>
+        </div>
+      </div>
+    );
   }
 }
