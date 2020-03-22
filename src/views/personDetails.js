@@ -49,6 +49,8 @@ export default class PersonDetails extends Component {
       position: person.position,
       gender: person.gender
     });
+
+    console.warn("Zaladowalem stronke")
   }
   updateRate = person => {
     this.setState({ firstName: person.firstName });

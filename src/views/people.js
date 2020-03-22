@@ -28,6 +28,9 @@ export default class People extends Component {
             dane = JSON.stringify(this.state.allPeople);
             sessionStorage.setItem(KEY, JSON.stringify(this.state.allPeople));
             
+          })
+          .catch(error=>{
+            alert("Server error: "+error);
           });
       }
     }
