@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Pobrane, { searchElement } from "../services/peopleSession";
+import getSessionStorage, { searchElement } from "../services/peopleSession";
 export default class PersonDetails extends Component {
   constructor(props) {
     super(props);
@@ -37,8 +37,8 @@ export default class PersonDetails extends Component {
     console.log(error, errorInfo);
   }
   componentDidMount() {
-    let tabliczka = Pobrane();
-    let person = searchElement(tabliczka, this.props.match.params.id);
+    let sessionPeopleStorage = getSessionStorage();
+    let person = searchElement(sessionPeopleStorage, this.props.match.params.id);
     this.setState({
       firstName: person.firstName,
       lastName: person.lastName,

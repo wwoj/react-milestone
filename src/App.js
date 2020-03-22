@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/header";
-import {BrowserRouter, Switch, Route } from "react-router-dom";
+import {BrowserRouter,HashRouter, Switch, Route } from "react-router-dom";
 import Home from './views/home';
 import People from './views/people';
 import Contact from './views/contact';
@@ -8,7 +8,7 @@ import PersonDetails from './views/personDetails'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
     <Header />
 
       <Route exact path ="/" component={Home} />
@@ -17,7 +17,7 @@ function App() {
       <Route path ="/person/:id" component={PersonDetails} />
     
     
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
