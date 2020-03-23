@@ -4,7 +4,7 @@ export default class PersonDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "test",
+      firstName: "",
       lastName: "",
       email: "",
       mobile: "",
@@ -50,7 +50,7 @@ export default class PersonDetails extends Component {
       gender: person.gender
     });
 
-    console.warn("Zaladowalem stronke")
+    
   }
   updateRate = person => {
     this.setState({ firstName: person.firstName });
